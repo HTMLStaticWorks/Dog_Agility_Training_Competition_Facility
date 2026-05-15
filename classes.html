@@ -13,25 +13,75 @@
 </head>
 <body class="bg-white text-gray-900 dark:bg-darker dark:text-gray-100 antialiased transition-colors duration-300">
 
+    <!-- HEADER / NAVIGATION -->
     <header class="fixed w-full top-0 z-50 bg-white/90 dark:bg-darker/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="flex items-center gap-2 group">
-                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300"><i data-lucide="dog" class="w-8 h-8 text-white"></i></div>
+                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                            <i data-lucide="dog" class="w-8 h-8 text-white"></i>
+                        </div>
                         <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
                     </a>
                 </div>
-                <nav class="hidden xl:flex space-x-6 items-center">
-                    <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors font-medium">Home</a>
-                    <a href="classes.html" class="text-primary font-medium transition-colors hover:text-secondary">Classes</a>
-                    <a href="competitions.html" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors font-medium">Competitions</a>
-                    <a href="membership.html" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors font-medium">Membership</a>
-                    <a href="pricing.html" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors font-medium">Pricing</a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden xl:flex gap-x-5 items-center px-4">
+                    <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Home</a>
+                    <a href="home2.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Home 2</a>
+                    <a href="classes.html" class="text-primary font-medium transition-colors hover:text-secondary whitespace-nowrap">Classes</a>
+                    <a href="competitions.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Competitions</a>
+                    <a href="membership.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Membership</a>
+                    <a href="pricing.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Pricing</a>
+                    <a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">About</a>
+                    <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Contact</a>
                 </nav>
-                <div class="hidden xl:flex items-center space-x-4">
-                    <button id="theme-toggle" class="p-2 text-gray-500 hover:text-primary rounded-full"><i data-lucide="moon" class="w-5 h-5 dark:hidden"></i><i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i></button>
-                    <a href="classes.html" class="px-5 py-2.5 text-sm font-semibold text-white bg-primary rounded-full hover:bg-blue-700 transition-colors shadow-lg">Book a Class</a>
+
+                <!-- Right Actions -->
+                <div class="hidden xl:flex items-center gap-x-3">
+                    <button id="theme-toggle" class="p-2 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle Theme">
+                        <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    </button>
+                    <button id="rtl-toggle" class="p-2 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle RTL">
+                        <i data-lucide="languages" class="w-5 h-5"></i>
+                    </button>
+                    
+                    <!-- CTAs -->
+                    <a href="classes.html" class="px-4 py-2 text-sm font-semibold text-white bg-primary rounded-full hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 whitespace-nowrap">Book a Class</a>
+                    <a href="competitions.html" class="px-4 py-2 text-sm font-semibold text-primary bg-blue-50 dark:bg-gray-800 rounded-full hover:bg-blue-100 dark:hover:bg-gray-700 transition-colors border border-blue-200 dark:border-gray-700 whitespace-nowrap">View Trials</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="xl:hidden flex items-center space-x-2">
+                    <button id="theme-toggle-mobile" class="p-2 text-gray-500 hover:text-primary dark:text-gray-400 transition-colors">
+                        <i data-lucide="moon" class="w-6 h-6 dark:hidden"></i>
+                        <i data-lucide="sun" class="w-6 h-6 hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-white dark:bg-darker border-t border-gray-200 dark:border-gray-800 shadow-xl absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col h-[calc(100vh-5rem)] overflow-y-auto">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
+                <a href="home2.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Home 2</a>
+                <a href="classes.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-blue-50 dark:bg-gray-800">Classes</a>
+                <a href="competitions.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Competitions</a>
+                <a href="membership.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Membership</a>
+                <a href="pricing.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Pricing</a>
+                <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
+                <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
+                
+                <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 flex flex-col space-y-4">
+                    <a href="classes.html" class="w-full text-center px-5 py-3 text-base font-semibold text-white bg-primary rounded-lg shadow-lg">Book a Training Class</a>
+                    <a href="competitions.html" class="w-full text-center px-5 py-3 text-base font-semibold text-primary bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-200 dark:border-gray-700">View Trial Schedule</a>
                 </div>
             </div>
         </div>
@@ -41,7 +91,7 @@
         <!-- 1. HERO -->
         <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?ixlib=rb-4.0.3" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gray-900/80 dark:bg-darker/90"></div>
             </div>
             <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
@@ -79,18 +129,18 @@
         <!-- 3. CLASS CATEGORIES -->
         <section class="py-24 bg-gray-50 dark:bg-dark">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
-                <div class="flex flex-col md:flex-row gap-12 items-center reveal">
-                    <div class="w-full md:w-1/2"><img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?ixlib=rb-4.0.3" class="rounded-3xl shadow-xl"></div>
-                    <div class="w-full md:w-1/2">
+                <div class="flex flex-col xl:flex-row gap-12 items-center text-center xl:text-left reveal">
+                    <div class="w-full xl:w-1/2"><img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&w=800&q=80" class="rounded-3xl shadow-xl mx-auto xl:mx-0"></div>
+                    <div class="w-full xl:w-1/2">
                         <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Level 1</span>
                         <h2 class="font-heading text-4xl text-gray-900 dark:text-white uppercase mb-4">Puppy Foundations</h2>
                         <p class="text-gray-600 dark:text-gray-400 mb-6">Designed for puppies aged 12 weeks to 8 months. Build a strong relationship.</p>
                         <button class="px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-blue-700 transition-colors">Book Now - $150/6wks</button>
                     </div>
                 </div>
-                <div class="flex flex-col md:flex-row-reverse gap-12 items-center reveal">
-                    <div class="w-full md:w-1/2"><img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?ixlib=rb-4.0.3" class="rounded-3xl shadow-xl"></div>
-                    <div class="w-full md:w-1/2">
+                <div class="flex flex-col xl:flex-row-reverse gap-12 items-center text-center xl:text-left reveal">
+                    <div class="w-full xl:w-1/2"><img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=800&q=80" class="rounded-3xl shadow-xl mx-auto xl:mx-0"></div>
+                    <div class="w-full xl:w-1/2">
                         <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Level 2</span>
                         <h2 class="font-heading text-4xl text-gray-900 dark:text-white uppercase mb-4">Beginner Agility</h2>
                         <p class="text-gray-600 dark:text-gray-400 mb-6">Introduction to all regulation obstacles including tunnels, jumps, and A-frame.</p>
@@ -108,17 +158,17 @@
                 </div>
                 <div class="grid md:grid-cols-3 gap-8 mb-16">
                     <div class="group text-center reveal">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3" class="w-48 h-48 rounded-full mx-auto mb-6 object-cover border-4 border-gray-100 dark:border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" class="w-48 h-48 rounded-full mx-auto mb-6 object-cover border-4 border-gray-100 dark:border-gray-800">
                         <h3 class="font-heading text-2xl text-gray-900 dark:text-white">Sarah Jenkins</h3>
                         <p class="text-primary font-medium">Head Instructor</p>
                     </div>
                     <div class="group text-center reveal" style="transition-delay: 100ms;">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3" class="w-48 h-48 rounded-full mx-auto mb-6 object-cover border-4 border-gray-100 dark:border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" class="w-48 h-48 rounded-full mx-auto mb-6 object-cover border-4 border-gray-100 dark:border-gray-800">
                         <h3 class="font-heading text-2xl text-gray-900 dark:text-white">Mike Dawson</h3>
                         <p class="text-secondary font-medium">Foundations</p>
                     </div>
                     <div class="group text-center reveal" style="transition-delay: 200ms;">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3" class="w-48 h-48 rounded-full mx-auto mb-6 object-cover border-4 border-gray-100 dark:border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80" class="w-48 h-48 rounded-full mx-auto mb-6 object-cover border-4 border-gray-100 dark:border-gray-800">
                         <h3 class="font-heading text-2xl text-gray-900 dark:text-white">Elena Rostova</h3>
                         <p class="text-primary font-medium">Jumping Mechanics</p>
                     </div>
