@@ -38,34 +38,40 @@
                 </div>
 
                 <!-- Desktop Navigation -->
-                <nav class="hidden xl:flex gap-x-5 items-center px-4">
+                <nav class="hidden xl:flex gap-x-4 items-center px-4">
                     <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Home</a>
                     <a href="home2.html" class="text-primary font-medium transition-colors hover:text-secondary whitespace-nowrap">Home 2</a>
                     <a href="classes.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Classes</a>
-                    <a href="competitions.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Competitions</a>
+                    <a href="services.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Services</a>
+
                     <a href="membership.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Membership</a>
                     <a href="pricing.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Pricing</a>
+                    <a href="blog.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Blog</a>
+
                     <a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">About</a>
                     <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors font-medium whitespace-nowrap">Contact</a>
                 </nav>
 
                 <!-- Right Actions -->
-                <div class="hidden xl:flex items-center gap-x-3">
-                    <button id="theme-toggle" class="p-2 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle Theme">
-                        <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
-                        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
-                    </button>
-                    <button id="rtl-toggle" class="p-2 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle RTL">
-                        <i data-lucide="languages" class="w-5 h-5"></i>
-                    </button>
-                    
-                    <!-- CTAs -->
-                    <a href="classes.html" class="px-4 py-2 text-sm font-semibold text-white bg-primary rounded-full hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30 whitespace-nowrap">Book a Class</a>
-                    <a href="competitions.html" class="px-4 py-2 text-sm font-semibold text-primary bg-blue-50 dark:bg-gray-800 rounded-full hover:bg-blue-100 dark:hover:bg-gray-700 transition-colors border border-blue-200 dark:border-gray-700 whitespace-nowrap">View Trials</a>
+                <div class="hidden xl:flex items-center gap-x-6 mr-4">
+                    <div class="flex items-center gap-x-3">
+                        <button id="theme-toggle" class="p-2 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800" aria-label="Toggle Theme">
+                            <i data-lucide="moon" class="w-5 h-5 dark:hidden"></i>
+                            <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                        </button>
+                        <button id="rtl-toggle" class="px-2 py-1 text-[10px] font-bold border border-gray-200 dark:border-gray-700 rounded text-gray-500 hover:text-primary hover:border-primary dark:text-gray-400 dark:hover:text-primary dark:hover:border-primary transition-all tracking-tighter" aria-label="Toggle RTL">
+                            RTL
+                        </button>
+                    </div>
+
+                    <a href="signup.html" class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-primary/20">Sign Up</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="xl:hidden flex items-center space-x-2">
+                    <button id="rtl-toggle-mobile" class="px-2 py-1 text-[10px] font-bold border border-gray-200 dark:border-gray-700 rounded text-gray-500 hover:text-primary hover:border-primary dark:text-gray-400 dark:hover:text-primary dark:hover:border-primary transition-all tracking-tighter mr-2" aria-label="Toggle RTL">
+                        RTL
+                    </button>
                     <button id="theme-toggle-mobile" class="p-2 text-gray-500 hover:text-primary dark:text-gray-400 transition-colors">
                         <i data-lucide="moon" class="w-6 h-6 dark:hidden"></i>
                         <i data-lucide="sun" class="w-6 h-6 hidden dark:block"></i>
@@ -83,16 +89,20 @@
                 <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
                 <a href="home2.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-blue-50 dark:bg-gray-800">Home 2</a>
                 <a href="classes.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Classes</a>
-                <a href="competitions.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Competitions</a>
+                <a href="services.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
+
                 <a href="membership.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Membership</a>
                 <a href="pricing.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Pricing</a>
+                <a href="blog.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Blog</a>
+
                 <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
                 <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
                 
-                <div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 flex flex-col space-y-4">
-                    <a href="classes.html" class="w-full text-center px-5 py-3 text-base font-semibold text-white bg-primary rounded-lg shadow-lg">Book a Training Class</a>
-                    <a href="competitions.html" class="w-full text-center px-5 py-3 text-base font-semibold text-primary bg-blue-50 dark:bg-gray-800 rounded-lg border border-blue-200 dark:border-gray-700">View Trial Schedule</a>
+                <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
+                    <a href="signup.html" class="block w-full text-center px-5 py-3 text-base font-bold text-white bg-primary rounded-xl shadow-lg">Sign Up</a>
                 </div>
+                
+
             </div>
         </div>
     </header>
@@ -130,9 +140,9 @@
                     <p class="text-gray-400 text-lg mt-4 max-w-2xl mx-auto">Discover the art of movement. Our courses are designed to test the limits of communication between handler and canine.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-wrap justify-center gap-8 mb-16">
                     <!-- Showcase Item 1 -->
-                    <div class="relative group rounded-3xl overflow-hidden reveal">
+                    <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] relative group rounded-3xl overflow-hidden reveal">
                         <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&w=600&q=80" alt="Weave" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-end p-8">
                             <div>
@@ -142,7 +152,7 @@
                         </div>
                     </div>
                     <!-- Showcase Item 2 -->
-                    <div class="relative group rounded-3xl overflow-hidden reveal" style="transition-delay: 150ms;">
+                    <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] relative group rounded-3xl overflow-hidden reveal" style="transition-delay: 150ms;">
                         <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?auto=format&fit=crop&w=600&q=80" alt="Jump" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-end p-8">
                             <div>
@@ -152,7 +162,7 @@
                         </div>
                     </div>
                     <!-- Showcase Item 3 -->
-                    <div class="relative group rounded-3xl overflow-hidden reveal" style="transition-delay: 300ms;">
+                    <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] relative group rounded-3xl overflow-hidden reveal" style="transition-delay: 300ms;">
                         <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80" alt="Contact" class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-end p-8">
                             <div>
@@ -210,16 +220,16 @@
                 <i data-lucide="sparkles" class="w-12 h-12 mx-auto text-secondary mb-6 animate-pulse"></i>
                 <h2 class="font-heading text-5xl uppercase mb-6">Start Them Young</h2>
                 <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-10">Our renowned Puppy Foundations program builds confidence, coordination, and an unbreakable bond before they ever see a regulation jump.</p>
-                <div class="grid md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
-                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20">
+                <div class="flex flex-wrap justify-center gap-8 text-left max-w-4xl mx-auto">
+                    <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20">
                         <h4 class="font-bold text-xl mb-2 text-secondary">Proprioception</h4>
                         <p class="text-blue-100 text-sm">Wobble boards and cavalettis to teach paw awareness.</p>
                     </div>
-                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20">
+                    <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20">
                         <h4 class="font-bold text-xl mb-2 text-secondary">Focus Games</h4>
                         <p class="text-blue-100 text-sm">Reward-based engagement amidst environmental distractions.</p>
                     </div>
-                    <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20">
+                    <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20">
                         <h4 class="font-bold text-xl mb-2 text-secondary">Flatwork</h4>
                         <p class="text-blue-100 text-sm">Circle work, front crosses, and acceleration cues without jumps.</p>
                     </div>
@@ -311,6 +321,7 @@
                     <ul class="space-y-3">
                         <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors text-sm">About Facility</a></li>
                         <li><a href="classes.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Training Classes</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Our Services</a></li>
                         <li><a href="competitions.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Trial Schedule</a></li>
                         <li><a href="membership.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Membership</a></li>
                         <li><a href="blog.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Training Blog</a></li>
@@ -322,6 +333,7 @@
                     <h4 class="font-heading text-xl text-white mb-6 uppercase tracking-wide">Support</h4>
                     <ul class="space-y-3">
                         <li><a href="pricing.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Pricing Plans</a></li>
+                        <li><a href="resources.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Resources</a></li>
                         <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors text-sm">Contact Us</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-primary transition-colors text-sm">FAQ</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-primary transition-colors text-sm">Privacy Policy</a></li>

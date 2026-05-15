@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
     // Elements
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const rtlToggleBtn = document.getElementById('rtl-toggle');
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const htmlElement = document.documentElement;
@@ -15,25 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
         htmlElement.classList.add('dark');
     }
 
-    if(themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
+    const themeToggleBtns = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
+    themeToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             htmlElement.classList.toggle('dark');
             const newTheme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
             localStorage.setItem('theme', newTheme);
         });
-    }
+    });
 
     // RTL Toggle Logic
     const currentDir = localStorage.getItem('dir') || 'ltr';
     htmlElement.setAttribute('dir', currentDir);
 
-    if(rtlToggleBtn) {
-        rtlToggleBtn.addEventListener('click', () => {
+    const rtlToggleBtns = document.querySelectorAll('#rtl-toggle, #rtl-toggle-mobile');
+    rtlToggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
             const dir = htmlElement.getAttribute('dir') === 'ltr' ? 'rtl' : 'ltr';
             htmlElement.setAttribute('dir', dir);
             localStorage.setItem('dir', dir);
         });
-    }
+    });
 
     // Mobile Menu Toggle
     if(mobileMenuBtn && mobileMenu) {
