@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership | AgilityPro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#2563EB', secondary: '#F97316', dark: '#1F2937', darker: '#111827' }, fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-darker dark:text-gray-100 antialiased transition-colors duration-300">
+
+    <header class="fixed w-full top-0 z-50 bg-white/90 dark:bg-darker/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary"><i data-lucide="dog" class="w-8 h-8 text-white"></i></div>
+                        <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
+                    </a>
+                </div>
+                <nav class="hidden xl:flex space-x-6 items-center">
+                    <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="classes.html" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors font-medium">Classes</a>
+                    <a href="competitions.html" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors font-medium">Competitions</a>
+                    <a href="membership.html" class="text-primary font-medium transition-colors hover:text-secondary">Membership</a>
+                    <a href="pricing.html" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors font-medium">Pricing</a>
+                </nav>
+                <div class="hidden xl:flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 text-gray-500 hover:text-primary rounded-full"><i data-lucide="moon" class="w-5 h-5 dark:hidden"></i><i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i></button>
+                    <a href="classes.html" class="px-5 py-2.5 text-sm font-semibold text-white bg-primary rounded-full hover:bg-blue-700 shadow-lg">Book a Class</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- 1. HERO -->
+        <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-primary text-white">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-br from-primary via-blue-800 to-darker opacity-90"></div>
+                <img src="https://images.unsplash.com/photo-1544568104-5b7eb8189dd4?ixlib=rb-4.0.3" class="w-full h-full object-cover mix-blend-overlay opacity-30">
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+                <h1 class="font-heading text-5xl md:text-7xl uppercase tracking-wider mb-6 animate-fade-in-down drop-shadow-lg">Join The <span class="text-secondary">Pack</span></h1>
+                <p class="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto animate-fade-in-up animation-delay-200">Unlock unlimited facility access, priority registration, and exclusive coaching perks.</p>
+            </div>
+        </section>
+
+        <!-- 2. FACILITY ACCESS BENEFITS -->
+        <section class="py-24 bg-white dark:bg-darker">
+            <div class="max-w-7xl mx-auto px-4 text-center reveal">
+                <h2 class="font-heading text-4xl text-gray-900 dark:text-white uppercase mb-16">Membership Perks</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 bg-gray-50 dark:bg-dark rounded-3xl hover-lift border border-gray-100 dark:border-gray-800">
+                        <i data-lucide="key" class="w-12 h-12 text-primary mx-auto mb-6"></i>
+                        <h4 class="font-bold text-xl dark:text-white mb-2">24/7 Facility Access</h4>
+                        <p class="text-gray-600 dark:text-gray-400">Train on your schedule with key fob access to our indoor turf.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 dark:bg-dark rounded-3xl hover-lift border border-gray-100 dark:border-gray-800">
+                        <i data-lucide="calendar-check" class="w-12 h-12 text-secondary mx-auto mb-6"></i>
+                        <h4 class="font-bold text-xl dark:text-white mb-2">Priority Registration</h4>
+                        <p class="text-gray-600 dark:text-gray-400">Get early access to classes, seminars, and trials.</p>
+                    </div>
+                    <div class="p-8 bg-gray-50 dark:bg-dark rounded-3xl hover-lift border border-gray-100 dark:border-gray-800">
+                        <i data-lucide="video" class="w-12 h-12 text-primary mx-auto mb-6"></i>
+                        <h4 class="font-bold text-xl dark:text-white mb-2">Online Resources</h4>
+                        <p class="text-gray-600 dark:text-gray-400">Exclusive access to our growing library of handling tutorials.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. MEMBERSHIP TIERS -->
+        <section class="py-24 bg-gray-50 dark:bg-dark">
+            <div class="max-w-7xl mx-auto px-4 reveal">
+                <h2 class="font-heading text-4xl text-gray-900 dark:text-white uppercase text-center mb-16">Choose Your Plan</h2>
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Standard -->
+                    <div class="bg-white dark:bg-darker rounded-3xl p-8 border border-gray-200 dark:border-gray-800 text-center hover-lift flex flex-col">
+                        <h3 class="font-heading text-2xl dark:text-white mb-2">Standard Handler</h3>
+                        <div class="text-4xl font-heading text-primary mb-6">$99<span class="text-lg text-gray-500 font-body">/mo</span></div>
+                        <button class="w-full py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white">Select</button>
+                    </div>
+                    <!-- Elite -->
+                    <div class="bg-primary text-white rounded-3xl p-8 border-2 border-secondary text-center hover-lift transform md:-translate-y-4 shadow-2xl relative flex flex-col">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondary px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider">Most Popular</div>
+                        <h3 class="font-heading text-2xl mb-2">Elite Competitor</h3>
+                        <div class="text-4xl font-heading text-white mb-6">$149<span class="text-lg text-blue-200 font-body">/mo</span></div>
+                        <button class="w-full py-3 bg-secondary text-white font-bold rounded-xl hover:bg-orange-600 shadow-lg">Join Elite</button>
+                    </div>
+                    <!-- Pack Leader -->
+                    <div class="bg-white dark:bg-darker rounded-3xl p-8 border border-gray-200 dark:border-gray-800 text-center hover-lift flex flex-col">
+                        <h3 class="font-heading text-2xl dark:text-white mb-2">Pack Leader</h3>
+                        <div class="text-4xl font-heading text-primary mb-6">$199<span class="text-lg text-gray-500 font-body">/mo</span></div>
+                        <button class="w-full py-3 border-2 border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white">Select</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. FACILITY RULES & ETIQUETTE -->
+        <section class="py-24 bg-white dark:bg-darker">
+            <div class="max-w-4xl mx-auto px-4 reveal">
+                <div class="border-l-4 border-secondary pl-6">
+                    <h2 class="font-heading text-4xl text-gray-900 dark:text-white uppercase mb-4">Member Etiquette</h2>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">To maintain a safe and premium environment for all members, we require strict adherence to our facility rules.</p>
+                    <ul class="space-y-4 text-sm text-gray-700 dark:text-gray-300">
+                        <li class="flex items-start gap-3"><i data-lucide="check-square" class="w-5 h-5 text-primary shrink-0"></i> <span>Clean up after your dog immediately. Failure to do so may result in membership revocation.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check-square" class="w-5 h-5 text-primary shrink-0"></i> <span>Do not adjust contact equipment heights without staff permission.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check-square" class="w-5 h-5 text-primary shrink-0"></i> <span>Limit off-peak ring time to 60 minutes if others are waiting.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. MEMBER TESTIMONIALS -->
+        <section class="py-24 bg-gray-50 dark:bg-dark">
+            <div class="max-w-7xl mx-auto px-4 text-center reveal">
+                <h2 class="font-heading text-4xl text-gray-900 dark:text-white uppercase mb-12">Member Success</h2>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white dark:bg-darker p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                        <p class="italic text-gray-600 dark:text-gray-400 mb-4">"The 24/7 access allowed me to train before work. We just earned our MACH!"</p>
+                        <h4 class="font-bold dark:text-white">- Rachel & Sparky</h4>
+                    </div>
+                    <div class="bg-white dark:bg-darker p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+                        <p class="italic text-gray-600 dark:text-gray-400 mb-4">"The video library alone is worth the membership price. Incredible value."</p>
+                        <h4 class="font-bold dark:text-white">- Tom & Max</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CORPORATE / SPONSORSHIP -->
+        <section class="py-24 bg-white dark:bg-darker border-t border-gray-100 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 text-center reveal">
+                <h2 class="font-heading text-3xl text-gray-500 uppercase tracking-widest mb-12">Our Proud Sponsors</h2>
+                <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+                    <!-- Placeholders for sponsor logos -->
+                    <div class="font-heading text-3xl font-bold text-gray-800 dark:text-white">K9 Gear</div>
+                    <div class="font-heading text-3xl font-bold text-gray-800 dark:text-white">AgilityTrak</div>
+                    <div class="font-heading text-3xl font-bold text-gray-800 dark:text-white">ProTreats</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA -->
+        <section class="py-20 bg-primary text-center">
+            <h2 class="font-heading text-4xl text-white uppercase mb-6">Ready for Unlimited Access?</h2>
+            <a href="pricing.html" class="inline-block px-8 py-4 bg-white text-primary font-bold rounded-full shadow-xl hover:scale-105 transition-transform">Sign Up Today</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 pt-10 pb-10">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+            &copy; <script>document.write(new Date().getFullYear())</script> AgilityPro.
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

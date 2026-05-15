@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | AgilityPro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#2563EB', secondary: '#F97316', dark: '#1F2937', darker: '#111827' }, fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-white text-gray-900 dark:bg-darker dark:text-gray-100 antialiased transition-colors duration-300">
+
+    <header class="fixed w-full top-0 z-50 bg-white/90 dark:bg-darker/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary"><i data-lucide="dog" class="w-8 h-8 text-white"></i></div>
+                        <span class="font-heading text-2xl tracking-wider uppercase mt-1 dark:text-white">Agility<span class="text-primary">Pro</span></span>
+                    </a>
+                </div>
+                <nav class="hidden xl:flex space-x-6 items-center">
+                    <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Home</a>
+                    <a href="classes.html" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Classes</a>
+                    <a href="competitions.html" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Competitions</a>
+                    <a href="about.html" class="text-primary font-medium">About</a>
+                    <a href="contact.html" class="text-gray-600 dark:text-gray-300 hover:text-primary font-medium">Contact</a>
+                </nav>
+                <div class="hidden xl:flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 text-gray-500 hover:text-primary rounded-full"><i data-lucide="moon" class="w-5 h-5 dark:hidden"></i><i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i></button>
+                    <a href="classes.html" class="px-5 py-2.5 text-sm font-semibold text-white bg-primary rounded-full hover:bg-blue-700 shadow-lg">Book a Class</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- 1. HERO -->
+        <section class="relative min-h-[50vh] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1544568104-5b7eb8189dd4?ixlib=rb-4.0.3" class="w-full h-full object-cover opacity-40 mix-blend-luminosity">
+                <div class="absolute inset-0 bg-gradient-to-t from-darker to-transparent"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto px-4 text-center reveal">
+                <h1 class="font-heading text-6xl uppercase tracking-wider mb-6 text-primary drop-shadow-md">Our Story</h1>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Building champions through positive reinforcement.</p>
+            </div>
+        </section>
+
+        <!-- 2. FACILITY STORY & PHILOSOPHY -->
+        <section class="py-24 bg-white dark:bg-darker border-b border-gray-100 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-16 items-center reveal">
+                    <div class="md:w-1/2">
+                        <h2 class="font-heading text-4xl dark:text-white uppercase mb-6">The Philosophy</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Founded in 2018, we believe in positive reinforcement. Every run is a partnership, and our training methods focus on building confidence, speed, and clear communication.</p>
+                        <div class="grid grid-cols-2 gap-4 mt-8">
+                            <div class="border-l-4 border-primary pl-4">
+                                <span class="font-heading text-3xl text-primary">50k+</span>
+                                <p class="text-sm text-gray-500 uppercase font-bold tracking-wider">Sq Ft Facility</p>
+                            </div>
+                            <div class="border-l-4 border-secondary pl-4">
+                                <span class="font-heading text-3xl text-secondary">100%</span>
+                                <p class="text-sm text-gray-500 uppercase font-bold tracking-wider">Positive Methods</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 relative">
+                        <img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?ixlib=rb-4.0.3" class="rounded-3xl shadow-xl z-10 relative">
+                        <div class="absolute -bottom-6 -left-6 w-full h-full border-4 border-primary rounded-3xl -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. COACHING TEAM -->
+        <section class="py-24 bg-gray-50 dark:bg-dark border-b border-gray-100 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 text-center reveal">
+                <h2 class="font-heading text-4xl dark:text-white uppercase mb-16">Meet the Team</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                     <div class="bg-white dark:bg-darker p-8 rounded-3xl shadow-sm hover-lift border border-gray-100 dark:border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h4 class="font-heading text-2xl dark:text-white">Sarah Jenkins</h4>
+                        <p class="text-primary font-bold mb-2">Founder / Head Coach</p>
+                    </div>
+                     <div class="bg-white dark:bg-darker p-8 rounded-3xl shadow-sm hover-lift border border-gray-100 dark:border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h4 class="font-heading text-2xl dark:text-white">Mike Dawson</h4>
+                        <p class="text-secondary font-bold mb-2">Director of Foundations</p>
+                    </div>
+                    <div class="bg-white dark:bg-darker p-8 rounded-3xl shadow-sm hover-lift border border-gray-100 dark:border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h4 class="font-heading text-2xl dark:text-white">Elena Rostova</h4>
+                        <p class="text-primary font-bold mb-2">Jumping Mechanics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CHAMPIONSHIP ACHIEVEMENTS -->
+        <section class="py-24 bg-white dark:bg-darker">
+            <div class="max-w-7xl mx-auto px-4 text-center reveal">
+                <i data-lucide="award" class="w-16 h-16 text-secondary mx-auto mb-4"></i>
+                <h2 class="font-heading text-4xl dark:text-white uppercase mb-12">Hall of Champions</h2>
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="w-48 text-center">
+                        <div class="text-5xl font-heading text-primary mb-2">12</div>
+                        <p class="font-bold text-gray-700 dark:text-gray-300">National Finalists</p>
+                    </div>
+                    <div class="w-48 text-center">
+                        <div class="text-5xl font-heading text-secondary mb-2">45</div>
+                        <p class="font-bold text-gray-700 dark:text-gray-300">MACH Titles</p>
+                    </div>
+                    <div class="w-48 text-center">
+                        <div class="text-5xl font-heading text-primary mb-2">8</div>
+                        <p class="font-bold text-gray-700 dark:text-gray-300">World Team Members</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. COMMUNITY IMPACT -->
+        <section class="py-24 bg-primary text-white">
+            <div class="max-w-5xl mx-auto px-4 text-center reveal">
+                <h2 class="font-heading text-4xl uppercase mb-6">Beyond the Ring</h2>
+                <p class="text-lg text-blue-100 mb-8">We partner with local shelters to provide foundational training for rescue dogs, increasing their adoptability and giving them a second chance at an active, fulfilling life.</p>
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/20 inline-block">
+                    <span class="block text-3xl font-heading text-secondary mb-1">500+</span>
+                    <span class="text-sm font-bold uppercase tracking-wider">Rescue Dogs Trained</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. FACILITY VIRTUAL TOUR -->
+        <section class="py-24 bg-gray-50 dark:bg-dark border-t border-gray-100 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 reveal">
+                <h2 class="font-heading text-4xl text-center dark:text-white uppercase mb-12">The Facility</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-4.0.3" class="w-full h-48 object-cover rounded-xl shadow hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3" class="w-full h-48 object-cover rounded-xl shadow hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1601633519840-02d25026df12?ixlib=rb-4.0.3" class="w-full h-48 object-cover rounded-xl shadow hover:scale-105 transition-transform">
+                    <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?ixlib=rb-4.0.3" class="w-full h-48 object-cover rounded-xl shadow hover:scale-105 transition-transform">
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA -->
+        <section class="py-20 bg-secondary relative overflow-hidden text-center">
+            <h2 class="font-heading text-4xl text-white uppercase mb-6 relative z-10">Come See For Yourself</h2>
+            <a href="contact.html" class="px-8 py-4 bg-white text-secondary font-bold rounded-full shadow-xl hover:scale-105 transition-transform relative z-10 inline-block">Contact Us</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 pt-10 pb-10">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+            &copy; <script>document.write(new Date().getFullYear())</script> AgilityPro.
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
