@@ -7,7 +7,28 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#2563EB', secondary: '#F97316', dark: '#1F2937', darker: '#111827' }, fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary, #2563EB)',
+                        'primary-dark': 'var(--color-primary-dark, #1D4ED8)',
+                        'primary-light': 'var(--color-primary-light, #EFF6FF)',
+                        secondary: 'var(--color-secondary, #F97316)',
+                        'secondary-dark': 'var(--color-secondary-dark, #EA580C)',
+                        'secondary-light': 'var(--color-secondary-light, #FFF7ED)',
+                        dark: '#1F2937',
+                        darker: '#111827',
+                        logo: {
+                            primary: '#2563EB',
+                            secondary: '#F97316',
+                        }
+                    },
+                    fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -21,10 +42,10 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="flex items-center gap-2 group">
-                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                        <div class="p-2 bg-logo-primary rounded-lg group-hover:bg-logo-secondary transition-colors duration-300">
                             <i data-lucide="dog" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
+                        <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-logo-primary">Pro</span></span>
                     </a>
                 </div>
 
@@ -54,7 +75,7 @@
                         </button>
                     </div>
 
-                    <a href="signup.html" class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-primary/20">Sign Up</a>
+                    <a href="signup.html" class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-full hover:bg-primary-dark transition-all shadow-lg shadow-primary/20">Sign Up</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -78,7 +99,7 @@
             <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col h-[calc(100vh-5rem)] overflow-y-auto">
                 <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
                 <a href="home2.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Home 2</a>
-                <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-blue-50 dark:bg-gray-800">About</a>
+                <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-primary-light dark:bg-gray-800">About</a>
                 <a href="services.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
                 <a href="classes.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Classes</a>
 
@@ -112,25 +133,64 @@
         <!-- 2. FACILITY STORY & PHILOSOPHY -->
         <section class="py-24 bg-white dark:bg-darker border-b border-gray-100 dark:border-gray-800">
             <div class="max-w-7xl mx-auto px-4">
-                <div class="flex flex-col xl:flex-row gap-16 items-center text-center xl:text-left reveal">
+                <div class="flex flex-col xl:flex-row gap-16 items-center text-center xl:text-left rtl:xl:text-right reveal mb-20">
                     <div class="xl:w-1/2">
-                        <h2 class="font-heading text-4xl dark:text-white uppercase mb-6">The Philosophy</h2>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Founded in 2018, we believe in positive reinforcement. Every run is a partnership, and our training methods focus on building confidence, speed, and clear communication.</p>
-                        <div class="grid grid-cols-2 gap-4 mt-8 max-w-sm mx-auto xl:mx-0">
-                            <div class="border-l-4 border-primary pl-4 text-left">
+                        <span class="text-sm font-bold text-secondary uppercase tracking-widest block mb-2">Our Mission</span>
+                        <h2 class="font-heading text-4xl md:text-5xl dark:text-white uppercase mb-6">Why We Started & What Makes Us the Best Choice</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                            AgilityPro was founded in 2018 by championship competitor Sarah Jenkins to resolve a key challenge: a lack of year-round, climate-controlled training centers focused strictly on the safety, health, and mutual trust of the dog-handler team. Sarah set out to build a positive-only space where handlers of all levels could practice safely and comfortably in any season.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                            We have become the region's most popular agility center because we combine a premium 50,000 sq ft facility—equipped with double agility rings, soft agility turf, and premium GALICAN shock-absorbing equipment—with certified elite coaching. By using modern, positive-reinforcement methodologies, we ensure training is fun for the dog while achieving competitive precision.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mt-8 max-w-sm mx-auto xl:ml-0 xl:mr-auto rtl:xl:ml-auto rtl:xl:mr-0">
+                            <div class="border-s-4 border-primary ps-4 text-start">
                                 <span class="font-heading text-3xl text-primary">50k+</span>
                                 <p class="text-sm text-gray-500 uppercase font-bold tracking-wider">Sq Ft Facility</p>
                             </div>
-                            <div class="border-l-4 border-secondary pl-4 text-left">
+                            <div class="border-s-4 border-secondary ps-4 text-start">
                                 <span class="font-heading text-3xl text-secondary">100%</span>
                                 <p class="text-sm text-gray-500 uppercase font-bold tracking-wider">Positive Methods</p>
                             </div>
                         </div>
                     </div>
-                    <div class="xl:w-1/2 relative mt-8 xl:mt-0">
-                        <div class="relative inline-block px-4 xl:px-0">
+                    <div class="xl:w-1/2 relative mt-8 xl:mt-0 flex justify-center">
+                        <div class="relative inline-block px-4 xl:px-0 max-w-md xl:max-w-full">
                             <img src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?auto=format&fit=crop&w=800&q=80" class="rounded-3xl shadow-2xl z-10 relative max-w-full h-auto">
                             <div class="absolute -bottom-4 -left-2 md:-bottom-6 md:-left-6 w-full h-full border-4 border-primary rounded-3xl -z-10"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-100 dark:border-gray-800 pt-20">
+                    <div class="text-center mb-12">
+                        <span class="text-sm font-bold text-secondary uppercase tracking-widest block mb-2">Our Programs</span>
+                        <h3 class="font-heading text-3xl md:text-4xl dark:text-white uppercase">The Agility Training We Provide</h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+                        <!-- Pillar 1 -->
+                        <div class="bg-gray-50 dark:bg-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800 hover-lift">
+                            <i data-lucide="sparkles" class="w-8 h-8 text-primary mb-4"></i>
+                            <h4 class="font-bold text-lg dark:text-white mb-2">Puppy & Foundations</h4>
+                            <p class="text-sm text-gray-500">Focuses on building core fitness, flatwork handling, target awareness, and safety before obstacles are introduced.</p>
+                        </div>
+                        <!-- Pillar 2 -->
+                        <div class="bg-gray-50 dark:bg-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800 hover-lift">
+                            <i data-lucide="target" class="w-8 h-8 text-secondary mb-4"></i>
+                            <h4 class="font-bold text-lg dark:text-white mb-2">Obstacle Mastery</h4>
+                            <p class="text-sm text-gray-500">Mastering technical components including weave entries from all angles, teeter drop confidence, and solid contact releases.</p>
+                        </div>
+                        <!-- Pillar 3 -->
+                        <div class="bg-gray-50 dark:bg-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800 hover-lift">
+                            <i data-lucide="navigation" class="w-8 h-8 text-primary mb-4"></i>
+                            <h4 class="font-bold text-lg dark:text-white mb-2">Handling & Sequencing</h4>
+                            <p class="text-sm text-gray-500">Learning advanced international handling styles, blind/front crosses, distance work, and decoding complex course maps.</p>
+                        </div>
+                        <!-- Pillar 4 -->
+                        <div class="bg-gray-50 dark:bg-dark p-6 rounded-2xl border border-gray-100 dark:border-gray-800 hover-lift">
+                            <i data-lucide="trophy" class="w-8 h-8 text-secondary mb-4"></i>
+                            <h4 class="font-bold text-lg dark:text-white mb-2">Competition Prep</h4>
+                            <p class="text-sm text-gray-500">Simulating trial scenarios, building ring focus, and mastering course speeds for handlers targeting regional and national trials.</p>
                         </div>
                     </div>
                 </div>
@@ -187,7 +247,7 @@
         <section class="py-24 bg-primary text-white">
             <div class="max-w-5xl mx-auto px-4 text-center reveal">
                 <h2 class="font-heading text-4xl uppercase mb-6">Beyond the Ring</h2>
-                <p class="text-lg text-blue-100 mb-8">We partner with local shelters to provide foundational training for rescue dogs, increasing their adoptability and giving them a second chance at an active, fulfilling life.</p>
+                <p class="text-lg text-primary-light mb-8">We partner with local shelters to provide foundational training for rescue dogs, increasing their adoptability and giving them a second chance at an active, fulfilling life.</p>
                 <div class="bg-white/10 p-6 rounded-2xl border border-white/20 inline-block">
                     <span class="block text-3xl font-heading text-secondary mb-1">500+</span>
                     <span class="text-sm font-bold uppercase tracking-wider">Rescue Dogs Trained</span>
@@ -208,10 +268,9 @@
             </div>
         </section>
 
-        <!-- 7. CTA -->
-        <section class="py-20 bg-secondary relative overflow-hidden text-center">
+        <section class="py-20 bg-primary relative overflow-hidden text-center">
             <h2 class="font-heading text-4xl text-white uppercase mb-6 relative z-10">Come See For Yourself</h2>
-            <a href="contact.html" class="px-8 py-4 bg-white text-secondary font-bold rounded-full shadow-xl hover:scale-105 transition-transform relative z-10 inline-block">Contact Us</a>
+            <a href="contact.html" class="px-8 py-4 bg-secondary text-white font-bold rounded-full shadow-xl hover:bg-secondary-dark hover:scale-105 transition-all relative z-10 inline-block">Contact Us</a>
         </section>
     </main>
 
@@ -223,10 +282,10 @@
                 <!-- Brand Info -->
                 <div class="col-span-1 md:col-span-2 lg:col-span-1">
                     <a href="index.html" class="flex items-center gap-2 mb-6 group">
-                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                        <div class="p-2 bg-logo-primary rounded-lg group-hover:bg-logo-secondary transition-colors duration-300">
                             <i data-lucide="dog" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="font-heading text-2xl tracking-wider text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
+                        <span class="font-heading text-2xl tracking-wider text-white uppercase mt-1">Agility<span class="text-logo-primary">Pro</span></span>
                     </a>
                     <p class="text-gray-400 mb-6 text-sm leading-relaxed">
                         The premier destination for dog agility training, offering state-of-the-art facilities and elite coaching for all skill levels.

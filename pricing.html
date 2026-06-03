@@ -7,7 +7,28 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#2563EB', secondary: '#F97316', dark: '#1F2937', darker: '#111827' }, fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary, #2563EB)',
+                        'primary-dark': 'var(--color-primary-dark, #1D4ED8)',
+                        'primary-light': 'var(--color-primary-light, #EFF6FF)',
+                        secondary: 'var(--color-secondary, #F97316)',
+                        'secondary-dark': 'var(--color-secondary-dark, #EA580C)',
+                        'secondary-light': 'var(--color-secondary-light, #FFF7ED)',
+                        dark: '#1F2937',
+                        darker: '#111827',
+                        logo: {
+                            primary: '#2563EB',
+                            secondary: '#F97316',
+                        }
+                    },
+                    fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -21,10 +42,10 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="flex items-center gap-2 group">
-                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                        <div class="p-2 bg-logo-primary rounded-lg group-hover:bg-logo-secondary transition-colors duration-300">
                             <i data-lucide="dog" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
+                        <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-logo-primary">Pro</span></span>
                     </a>
                 </div>
 
@@ -54,7 +75,7 @@
                         </button>
                     </div>
 
-                    <a href="signup.html" class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-primary/20">Sign Up</a>
+                    <a href="signup.html" class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-full hover:bg-primary-dark transition-all shadow-lg shadow-primary/20">Sign Up</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -83,7 +104,7 @@
                 <a href="classes.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Classes</a>
 
                 <a href="membership.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Membership</a>
-                <a href="pricing.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-blue-50 dark:bg-gray-800">Pricing</a>
+                <a href="pricing.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-primary-light dark:bg-gray-800">Pricing</a>
                 <a href="blog.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Blog</a>
                 <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
                 
@@ -118,8 +139,8 @@
                     <div class="bg-primary text-white rounded-3xl p-8 border-2 border-secondary text-center hover-lift transform md:-translate-y-4 shadow-xl relative">
                         <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-secondary px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Most Popular</div>
                         <h4 class="font-heading text-2xl mb-2">Elite Competitor</h4>
-                        <div class="text-4xl font-heading text-white mb-6">$149<span class="text-lg text-blue-200">/mo</span></div>
-                        <button class="w-full py-2 bg-secondary text-white font-bold rounded-xl hover:bg-orange-600 transition-colors">Select</button>
+                        <div class="text-4xl font-heading text-white mb-6">$149<span class="text-lg text-primary-light">/mo</span></div>
+                        <button class="w-full py-2 bg-secondary text-white font-bold rounded-xl hover:bg-secondary-dark transition-colors">Select</button>
                     </div>
                     <div class="bg-gray-50 dark:bg-dark rounded-3xl p-8 border border-gray-200 dark:border-gray-800 text-center hover-lift">
                         <h4 class="font-heading text-2xl mb-2 dark:text-white">Pack Leader</h4>
@@ -231,9 +252,9 @@
         </section>
 
         <!-- 7. CTA -->
-        <section class="py-20 bg-secondary relative overflow-hidden text-center">
+        <section class="py-20 bg-primary relative overflow-hidden text-center">
             <h2 class="font-heading text-5xl text-white uppercase mb-6 relative z-10">Join Our Community</h2>
-            <a href="contact.html" class="px-8 py-4 bg-white text-secondary font-heading tracking-wide text-lg rounded-full hover:bg-gray-100 shadow-xl inline-block relative z-10">Get Started</a>
+            <a href="contact.html" class="px-8 py-4 bg-secondary text-white font-heading tracking-wide text-lg rounded-full hover:bg-secondary-dark transition-all shadow-xl inline-block relative z-10">Get Started</a>
         </section>
     </main>
 
@@ -245,10 +266,10 @@
                 <!-- Brand Info -->
                 <div class="col-span-1 md:col-span-2 lg:col-span-1">
                     <a href="index.html" class="flex items-center gap-2 mb-6 group">
-                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                        <div class="p-2 bg-logo-primary rounded-lg group-hover:bg-logo-secondary transition-colors duration-300">
                             <i data-lucide="dog" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="font-heading text-2xl tracking-wider text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
+                        <span class="font-heading text-2xl tracking-wider text-white uppercase mt-1">Agility<span class="text-logo-primary">Pro</span></span>
                     </a>
                     <p class="text-gray-400 mb-6 text-sm leading-relaxed">
                         The premier destination for dog agility training, offering state-of-the-art facilities and elite coaching for all skill levels.

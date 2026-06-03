@@ -7,7 +7,28 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#2563EB', secondary: '#F97316', dark: '#1F2937', darker: '#111827' }, fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary, #2563EB)',
+                        'primary-dark': 'var(--color-primary-dark, #1D4ED8)',
+                        'primary-light': 'var(--color-primary-light, #EFF6FF)',
+                        secondary: 'var(--color-secondary, #F97316)',
+                        'secondary-dark': 'var(--color-secondary-dark, #EA580C)',
+                        'secondary-light': 'var(--color-secondary-light, #FFF7ED)',
+                        dark: '#1F2937',
+                        darker: '#111827',
+                        logo: {
+                            primary: '#2563EB',
+                            secondary: '#F97316',
+                        }
+                    },
+                    fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -21,10 +42,10 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="flex items-center gap-2 group">
-                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                        <div class="p-2 bg-logo-primary rounded-lg group-hover:bg-logo-secondary transition-colors duration-300">
                             <i data-lucide="dog" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
+                        <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-logo-primary">Pro</span></span>
                     </a>
                 </div>
 
@@ -54,7 +75,7 @@
                         </button>
                     </div>
 
-                    <a href="signup.html" class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-primary/20">Sign Up</a>
+                    <a href="signup.html" class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-full hover:bg-primary-dark transition-all shadow-lg shadow-primary/20">Sign Up</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -79,7 +100,7 @@
                 <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Home</a>
                 <a href="home2.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Home 2</a>
                 <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
-                <a href="services.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-blue-50 dark:bg-gray-800">Services</a>
+                <a href="services.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-primary-light dark:bg-gray-800">Services</a>
                 <a href="classes.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Classes</a>
 
                 <a href="membership.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Membership</a>
@@ -104,7 +125,7 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-darker to-transparent"></div>
             </div>
             <div class="max-w-3xl mx-auto px-4 relative z-10 reveal">
-                <h1 class="font-heading text-5xl md:text-6xl uppercase mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Our Services</h1>
+                <h1 class="font-heading text-5xl md:text-6xl uppercase mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-light">Our Services</h1>
                 <p class="text-xl text-gray-300">Everything needed to support your dog sports journey.</p>
             </div>
         </section>
@@ -166,10 +187,10 @@
         <section class="py-24 bg-white dark:bg-darker border-t border-gray-100 dark:border-gray-800">
             <div class="max-w-7xl mx-auto px-4 reveal">
                 <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/2">
-                        <img src="https://images.unsplash.com/photo-1544568104-5b7eb8189dd4?auto=format&fit=crop&w=800&q=80" class="rounded-3xl shadow-lg">
+                    <div class="w-full md:w-2/5">
+                        <img src="https://images.unsplash.com/photo-1544568104-5b7eb8189dd4?auto=format&fit=crop&w=800&q=80" class="rounded-3xl shadow-lg w-full h-80 object-cover">
                     </div>
-                    <div class="md:w-1/2">
+                    <div class="w-full md:w-3/5">
                         <h2 class="font-heading text-4xl uppercase mb-4 dark:text-white">Seminars & Workshops</h2>
                         <p class="text-gray-600 dark:text-gray-400 mb-6">We regularly bring in world-renowned agility coaches for weekend seminars. If you are a coach looking to rent our facility for a workshop, we offer competitive day rates and marketing assistance.</p>
                         <button class="px-6 py-3 bg-gray-900 text-white dark:bg-white dark:text-gray-900 font-bold rounded-full hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white transition-all transform hover:-translate-y-1 shadow-lg">Inquire About Hosting</button>
@@ -204,7 +225,7 @@
         <section class="py-24 bg-primary relative overflow-hidden">
             <div class="max-w-4xl mx-auto px-4 text-center relative z-10 reveal">
                 <h2 class="font-heading text-5xl text-white uppercase mb-8">Not sure where to start?</h2>
-                <a href="contact.html" class="px-10 py-5 bg-white text-primary font-heading text-2xl tracking-widest rounded-full hover:scale-105 transition-transform inline-block">Book Evaluation</a>
+                <a href="contact.html" class="px-10 py-5 bg-white text-primary font-heading text-2xl tracking-widest rounded-full hover:bg-primary-dark hover:text-white hover:scale-105 transition-all inline-block">Book Evaluation</a>
             </div>
         </section>
     </main>
@@ -217,10 +238,10 @@
                 <!-- Brand Info -->
                 <div class="col-span-1 md:col-span-2 lg:col-span-1">
                     <a href="index.html" class="flex items-center gap-2 mb-6 group">
-                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                        <div class="p-2 bg-logo-primary rounded-lg group-hover:bg-logo-secondary transition-colors duration-300">
                             <i data-lucide="dog" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="font-heading text-2xl tracking-wider text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
+                        <span class="font-heading text-2xl tracking-wider text-white uppercase mt-1">Agility<span class="text-logo-primary">Pro</span></span>
                     </a>
                     <p class="text-gray-400 mb-6 text-sm leading-relaxed">
                         The premier destination for dog agility training, offering state-of-the-art facilities and elite coaching for all skill levels.

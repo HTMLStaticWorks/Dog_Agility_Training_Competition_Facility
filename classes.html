@@ -7,7 +7,28 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#2563EB', secondary: '#F97316', dark: '#1F2937', darker: '#111827' }, fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary, #2563EB)',
+                        'primary-dark': 'var(--color-primary-dark, #1D4ED8)',
+                        'primary-light': 'var(--color-primary-light, #EFF6FF)',
+                        secondary: 'var(--color-secondary, #F97316)',
+                        'secondary-dark': 'var(--color-secondary-dark, #EA580C)',
+                        'secondary-light': 'var(--color-secondary-light, #FFF7ED)',
+                        dark: '#1F2937',
+                        darker: '#111827',
+                        logo: {
+                            primary: '#2563EB',
+                            secondary: '#F97316',
+                        }
+                    },
+                    fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -21,10 +42,10 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="flex items-center gap-2 group">
-                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                        <div class="p-2 bg-logo-primary rounded-lg group-hover:bg-logo-secondary transition-colors duration-300">
                             <i data-lucide="dog" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
+                        <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-logo-primary">Pro</span></span>
                     </a>
                 </div>
 
@@ -54,7 +75,7 @@
                         </button>
                     </div>
 
-                    <a href="signup.html" class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-primary/20">Sign Up</a>
+                    <a href="signup.html" class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-full hover:bg-primary-dark transition-all shadow-lg shadow-primary/20">Sign Up</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -80,7 +101,7 @@
                 <a href="home2.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Home 2</a>
                 <a href="about.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">About</a>
                 <a href="services.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Services</a>
-                <a href="classes.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-blue-50 dark:bg-gray-800">Classes</a>
+                <a href="classes.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-primary-light dark:bg-gray-800">Classes</a>
 
                 <a href="membership.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Membership</a>
                 <a href="pricing.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Pricing</a>
@@ -116,19 +137,19 @@
                 <div class="flex flex-col md:flex-row justify-between items-center relative">
                     <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 dark:bg-gray-800 -z-10 -translate-y-1/2"></div>
                     <div class="bg-white dark:bg-darker p-4 w-full md:w-1/5 relative group">
-                        <div class="w-16 h-16 mx-auto bg-blue-100 dark:bg-gray-800 text-primary rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">1</div>
+                        <div class="w-16 h-16 mx-auto bg-primary-light dark:bg-gray-800 text-primary rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">1</div>
                         <h4 class="font-bold text-gray-900 dark:text-white">Foundations</h4>
                     </div>
                     <div class="bg-white dark:bg-darker p-4 w-full md:w-1/5 relative group">
-                        <div class="w-16 h-16 mx-auto bg-blue-100 dark:bg-gray-800 text-primary rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">2</div>
+                        <div class="w-16 h-16 mx-auto bg-primary-light dark:bg-gray-800 text-primary rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">2</div>
                         <h4 class="font-bold text-gray-900 dark:text-white">Beginner</h4>
                     </div>
                     <div class="bg-white dark:bg-darker p-4 w-full md:w-1/5 relative group">
-                        <div class="w-16 h-16 mx-auto bg-orange-100 dark:bg-gray-800 text-secondary rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">3</div>
+                        <div class="w-16 h-16 mx-auto bg-primary-light dark:bg-gray-800 text-primary rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">3</div>
                         <h4 class="font-bold text-gray-900 dark:text-white">Intermediate</h4>
                     </div>
                     <div class="bg-white dark:bg-darker p-4 w-full md:w-1/5 relative group">
-                        <div class="w-16 h-16 mx-auto bg-gray-900 text-white rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">4</div>
+                        <div class="w-16 h-16 mx-auto bg-primary-light dark:bg-gray-800 text-primary rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">4</div>
                         <h4 class="font-bold text-gray-900 dark:text-white">Advanced</h4>
                     </div>
                     <div class="bg-white dark:bg-darker p-4 w-full md:w-1/5 relative group">
@@ -148,7 +169,7 @@
                         <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Level 1</span>
                         <h2 class="font-heading text-4xl text-gray-900 dark:text-white uppercase mb-4">Puppy Foundations</h2>
                         <p class="text-gray-600 dark:text-gray-400 mb-6">Designed for puppies aged 12 weeks to 8 months. Build a strong relationship.</p>
-                        <button class="px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-blue-700 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">Book Now - $150/6wks</button>
+                        <button class="px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">Book Now - $150/6wks</button>
                     </div>
                 </div>
                 <div class="flex flex-col xl:flex-row-reverse gap-12 items-center text-center xl:text-left reveal">
@@ -157,7 +178,7 @@
                         <span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Level 2</span>
                         <h2 class="font-heading text-4xl text-gray-900 dark:text-white uppercase mb-4">Beginner Agility</h2>
                         <p class="text-gray-600 dark:text-gray-400 mb-6">Introduction to all regulation obstacles including tunnels, jumps, and A-frame.</p>
-                        <button class="px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-blue-700 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">Book Now - $160/6wks</button>
+                        <button class="px-8 py-3 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">Book Now - $160/6wks</button>
                     </div>
                 </div>
 
@@ -168,7 +189,7 @@
                         <span class="text-secondary font-bold tracking-widest uppercase text-sm mb-2 block">Level 3</span>
                         <h2 class="font-heading text-4xl text-gray-900 dark:text-white uppercase mb-4">Intermediate Handling</h2>
                         <p class="text-gray-600 dark:text-gray-400 mb-6">Focus on sequencing, front crosses, and maintaining speed through short courses.</p>
-                        <button class="px-8 py-3 bg-secondary text-white font-semibold rounded-full hover:bg-orange-600 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">Book Now - $175/6wks</button>
+                        <button class="px-8 py-3 bg-secondary text-white font-semibold rounded-full hover:bg-secondary-dark transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">Book Now - $175/6wks</button>
                     </div>
                 </div>
 
@@ -190,7 +211,7 @@
                         <span class="text-secondary font-bold tracking-widest uppercase text-sm mb-2 block">Level 5</span>
                         <h2 class="font-heading text-4xl text-gray-900 dark:text-white uppercase mb-4">Masters/Elite</h2>
                         <p class="text-gray-600 dark:text-gray-400 mb-6">Fine-tuning for the national stage. Precision handling and high-speed course analysis.</p>
-                        <button class="px-8 py-3 bg-secondary text-white font-semibold rounded-full hover:bg-orange-600 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">Book Now - $200/6wks</button>
+                        <button class="px-8 py-3 bg-secondary text-white font-semibold rounded-full hover:bg-secondary-dark transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5">Book Now - $200/6wks</button>
                     </div>
                 </div>
             </div>
@@ -264,10 +285,10 @@
         </section>
 
         <!-- 7. CTA -->
-        <section class="py-20 bg-secondary relative overflow-hidden">
+        <section class="py-20 bg-primary relative overflow-hidden">
             <div class="max-w-4xl mx-auto px-4 text-center relative z-10 reveal">
                 <h2 class="font-heading text-5xl text-white uppercase mb-6">Ready to Run?</h2>
-                <a href="contact.html" class="px-8 py-4 bg-white text-secondary font-heading tracking-wide text-lg rounded-full hover:bg-gray-100 shadow-xl inline-block">Book an Evaluation</a>
+                <a href="contact.html" class="px-8 py-4 bg-secondary text-white font-heading tracking-wide text-lg rounded-full hover:bg-secondary-dark transition-all shadow-xl inline-block">Book an Evaluation</a>
             </div>
         </section>
     </main>
@@ -280,10 +301,10 @@
                 <!-- Brand Info -->
                 <div class="col-span-1 md:col-span-2 lg:col-span-1">
                     <a href="index.html" class="flex items-center gap-2 mb-6 group">
-                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                        <div class="p-2 bg-logo-primary rounded-lg group-hover:bg-logo-secondary transition-colors duration-300">
                             <i data-lucide="dog" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="font-heading text-2xl tracking-wider text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
+                        <span class="font-heading text-2xl tracking-wider text-white uppercase mt-1">Agility<span class="text-logo-primary">Pro</span></span>
                     </a>
                     <p class="text-gray-400 mb-6 text-sm leading-relaxed">
                         The premier destination for dog agility training, offering state-of-the-art facilities and elite coaching for all skill levels.

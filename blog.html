@@ -7,7 +7,28 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: '#2563EB', secondary: '#F97316', dark: '#1F2937', darker: '#111827' }, fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--color-primary, #2563EB)',
+                        'primary-dark': 'var(--color-primary-dark, #1D4ED8)',
+                        'primary-light': 'var(--color-primary-light, #EFF6FF)',
+                        secondary: 'var(--color-secondary, #F97316)',
+                        'secondary-dark': 'var(--color-secondary-dark, #EA580C)',
+                        'secondary-light': 'var(--color-secondary-light, #FFF7ED)',
+                        dark: '#1F2937',
+                        darker: '#111827',
+                        logo: {
+                            primary: '#2563EB',
+                            secondary: '#F97316',
+                        }
+                    },
+                    fontFamily: { heading: ['Bebas Neue', 'sans-serif'], body: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -21,10 +42,10 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html" class="flex items-center gap-2 group">
-                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                        <div class="p-2 bg-logo-primary rounded-lg group-hover:bg-logo-secondary transition-colors duration-300">
                             <i data-lucide="dog" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
+                        <span class="font-heading text-2xl tracking-wider text-gray-900 dark:text-white uppercase mt-1">Agility<span class="text-logo-primary">Pro</span></span>
                     </a>
                 </div>
 
@@ -54,7 +75,7 @@
                         </button>
                     </div>
 
-                    <a href="signup.html" class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-full hover:bg-blue-700 transition-all shadow-lg shadow-primary/20">Sign Up</a>
+                    <a href="signup.html" class="px-5 py-2 text-sm font-bold text-white bg-primary rounded-full hover:bg-primary-dark transition-all shadow-lg shadow-primary/20">Sign Up</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -84,7 +105,7 @@
 
                 <a href="membership.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Membership</a>
                 <a href="pricing.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Pricing</a>
-                <a href="blog.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-blue-50 dark:bg-gray-800">Blog</a>
+                <a href="blog.html" class="block px-3 py-3 rounded-md text-base font-medium text-primary bg-primary-light dark:bg-gray-800">Blog</a>
                 <a href="contact.html" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800">Contact</a>
                 
                 <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800">
@@ -115,7 +136,7 @@
                             <span class="bg-secondary text-white px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-4 inline-block">Featured</span>
                             <h2 class="font-heading text-4xl md:text-5xl text-white uppercase mb-4">The Psychology of the Start Line Stay</h2>
                             <p class="text-gray-300 mb-6 hidden md:block">Mastering the start line is more than just a sit-stay. It's about maintaining connection and setting the tone for a clean run.</p>
-                            <a href="#" class="inline-flex items-center text-primary font-bold hover:text-blue-400">Read Full Article <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i></a>
+                            <a href="#" class="inline-flex items-center text-primary font-bold hover:text-primary-light">Read Full Article <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -185,19 +206,46 @@
         </section>
 
         <!-- 6. AUTHOR SPOTLIGHT -->
-        <section class="py-24 bg-gray-50 dark:bg-dark">
+        <section class="py-24 bg-gray-50 dark:bg-dark border-t border-gray-100 dark:border-gray-800">
             <div class="max-w-7xl mx-auto px-4 text-center reveal">
                 <h2 class="font-heading text-4xl uppercase mb-12 dark:text-white">Top Contributors</h2>
-                <div class="flex justify-center gap-12">
-                    <div class="text-center">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
-                        <h4 class="font-bold dark:text-white">Sarah Jenkins</h4>
-                        <p class="text-sm text-primary">Head Coach</p>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Contributor 1 -->
+                    <div class="bg-white dark:bg-darker p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover-lift flex flex-col sm:flex-row items-center gap-6 text-left">
+                        <div class="relative shrink-0">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" class="w-28 h-28 rounded-2xl object-cover shadow-md">
+                            <span class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-heading text-lg shadow-md border-2 border-white dark:border-darker">#1</span>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex items-center gap-2 mb-1">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Sarah Jenkins</h3>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary-light text-primary dark:bg-primary-dark/20 dark:text-primary-light">Head Coach</span>
+                            </div>
+                            <p class="text-xs text-gray-400 mb-3 flex items-center gap-1"><i data-lucide="book-open" class="w-3.5 h-3.5"></i> 14 Articles Published</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Sarah shares advanced training methods, jump safety, and competitive course maps drawn from 15+ years of championship coaching.</p>
+                            <a href="about.html" class="inline-flex items-center text-primary text-xs font-bold hover:text-primary-dark transition-colors group">
+                                View Bio <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
-                        <h4 class="font-bold dark:text-white">Mike Dawson</h4>
-                        <p class="text-sm text-secondary">Foundations</p>
+
+                    <!-- Contributor 2 -->
+                    <div class="bg-white dark:bg-darker p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-800 hover-lift flex flex-col sm:flex-row items-center gap-6 text-left">
+                        <div class="relative shrink-0">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" class="w-28 h-28 rounded-2xl object-cover shadow-md">
+                            <span class="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-secondary text-white flex items-center justify-center font-heading text-lg shadow-md border-2 border-white dark:border-darker">#2</span>
+                        </div>
+                        <div class="flex-grow">
+                            <div class="flex items-center gap-2 mb-1">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Mike Dawson</h3>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-secondary-light text-secondary dark:bg-secondary-dark/20 dark:text-secondary-light">Foundations</span>
+                            </div>
+                            <p class="text-xs text-gray-400 mb-3 flex items-center gap-1"><i data-lucide="book-open" class="w-3.5 h-3.5"></i> 9 Articles Published</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4">Mike is dedicated to puppy flatwork, body awareness, and obstacle confidence fundamentals, ensuring dogs start their journey right.</p>
+                            <a href="about.html" class="inline-flex items-center text-primary text-xs font-bold hover:text-primary-dark transition-colors group">
+                                View Bio <i data-lucide="arrow-right" class="w-3.5 h-3.5 ml-1 transform group-hover:translate-x-0.5 transition-transform"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -208,10 +256,10 @@
             <div class="max-w-2xl mx-auto px-4 reveal">
                 <i data-lucide="mail" class="w-12 h-12 mx-auto mb-6 opacity-80"></i>
                 <h2 class="font-heading text-4xl uppercase mb-4">Get Training Tips in Your Inbox</h2>
-                <p class="mb-8 text-blue-100">Join our newsletter for weekly agility insights.</p>
+                <p class="mb-8 text-primary-light">Join our newsletter for weekly agility insights.</p>
                 <form class="flex flex-col sm:flex-row gap-4 justify-center">
                     <input type="email" placeholder="Your email address" class="px-6 py-3 rounded-full text-gray-900 w-full sm:w-auto min-w-[300px]">
-                    <button type="submit" class="px-8 py-3 bg-secondary rounded-full font-bold hover:bg-orange-600 shadow-lg">Subscribe</button>
+                    <button type="submit" class="px-8 py-3 bg-secondary rounded-full font-bold hover:bg-secondary-dark shadow-lg">Subscribe</button>
                 </form>
             </div>
         </section>
@@ -225,10 +273,10 @@
                 <!-- Brand Info -->
                 <div class="col-span-1 md:col-span-2 lg:col-span-1">
                     <a href="index.html" class="flex items-center gap-2 mb-6 group">
-                        <div class="p-2 bg-primary rounded-lg group-hover:bg-secondary transition-colors duration-300">
+                        <div class="p-2 bg-logo-primary rounded-lg group-hover:bg-logo-secondary transition-colors duration-300">
                             <i data-lucide="dog" class="w-8 h-8 text-white"></i>
                         </div>
-                        <span class="font-heading text-2xl tracking-wider text-white uppercase mt-1">Agility<span class="text-primary">Pro</span></span>
+                        <span class="font-heading text-2xl tracking-wider text-white uppercase mt-1">Agility<span class="text-logo-primary">Pro</span></span>
                     </a>
                     <p class="text-gray-400 mb-6 text-sm leading-relaxed">
                         The premier destination for dog agility training, offering state-of-the-art facilities and elite coaching for all skill levels.
