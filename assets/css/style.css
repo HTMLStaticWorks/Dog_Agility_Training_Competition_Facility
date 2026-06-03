@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --color-primary: #2563EB;
+    --color-primary-dark: #1D4ED8;
+    --color-primary-light: #EFF6FF;
+    --color-secondary: #F97316;
+    --color-secondary-dark: #EA580C;
+    --color-secondary-light: #FFF7ED;
+}
+
 /* Base Styles */
 body {
     font-family: 'Inter', sans-serif;
@@ -91,12 +100,12 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #2563EB;
+    background: var(--color-primary);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #1d4ed8;
+    background: var(--color-primary-dark);
 }
 
 /* RTL Support */
@@ -112,4 +121,78 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 [dir="rtl"] .mr-4 {
     margin-right: 0;
     margin-left: 1rem;
+}
+
+[dir="rtl"] .text-left {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+    text-align: left !important;
+}
+
+@media (min-width: 640px) {
+    [dir="rtl"] .sm\:text-left {
+        text-align: right !important;
+    }
+    [dir="rtl"] .sm\:text-right {
+        text-align: left !important;
+    }
+}
+
+@media (min-width: 768px) {
+    [dir="rtl"] .md\:text-left {
+        text-align: right !important;
+    }
+    [dir="rtl"] .md\:text-right {
+        text-align: left !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    [dir="rtl"] .lg\:text-left {
+        text-align: right !important;
+    }
+    [dir="rtl"] .lg\:text-right {
+        text-align: left !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    [dir="rtl"] .xl\:text-left {
+        text-align: right !important;
+    }
+    [dir="rtl"] .xl\:text-right {
+        text-align: left !important;
+    }
+}
+
+/* RTL Support for Physical Borders and Padding */
+[dir="rtl"] .border-l-4 {
+    border-left-width: 0 !important;
+    border-right-width: 4px !important;
+}
+
+[dir="rtl"] .pl-4 {
+    padding-left: 0 !important;
+    padding-right: 1rem !important;
+}
+
+[dir="rtl"] .pl-6 {
+    padding-left: 0 !important;
+    padding-right: 1.5rem !important;
+}
+
+/* Button Hover State Unification to Primary Brand Color */
+.bg-primary:hover,
+button.bg-primary:hover,
+a.bg-primary:hover,
+.bg-secondary:hover,
+button.bg-secondary:hover,
+a.bg-secondary:hover,
+button.bg-gray-900:hover,
+.dark button.dark\:bg-white:hover {
+    background-color: var(--color-primary-dark) !important;
+    border-color: var(--color-primary-dark) !important;
+    color: #ffffff !important;
 }
